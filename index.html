@@ -1,60 +1,23 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡ALERTA DE SEGURIDAD!</title>
+    <title>Google - Alerta de Seguridad</title>
     <style>
-        body { background: #000; color: #0f0; font-family: 'Courier New', monospace; text-align: center; padding-top: 50px; overflow: hidden; }
-        #hack { font-size: 1.2rem; }
-        .boton-trampa {
-            padding: 15px 30px;
-            background: red;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-weight: bold;
-            position: absolute;
-            cursor: pointer;
-            transition: 0.1s;
-        }
+        body { font-family: 'Roboto', arial, sans-serif; background: #fff; color: #3c4043; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { max-width: 450px; padding: 40px; border: 1px solid #dadce0; border-radius: 8px; text-align: center; }
+        .logo { color: #4285f4; font-size: 24px; font-weight: bold; margin-bottom: 20px; }
+        .warning { color: #d93025; font-size: 20px; font-weight: 500; }
+        .btn { background: #1a73e8; color: white; border: none; padding: 10px 24px; border-radius: 4px; cursor: pointer; margin-top: 20px; font-weight: 500; }
     </style>
 </head>
 <body>
-
-    <h1>⚠️ ERROR DEL SISTEMA ⚠️</h1>
-    <p id="hack">Iniciando descarga de datos personales...</p>
-    <p>Para detener la descarga, presiona el botón:</p>
-
-    <button class="boton-trampa" id="btn" onmouseover="escapar()" onclick="victoria()">DETENER HACKEO</button>
-
-    <script>
-        function escapar() {
-            const btn = document.getElementById('btn');
-            // Mueve el botón a una posición aleatoria
-            const x = Math.random() * (window.innerWidth - btn.clientWidth);
-            const y = Math.random() * (window.innerHeight - btn.clientHeight);
-            btn.style.left = x + 'px';
-            btn.style.top = y + 'px';
-        }
-
-        function victoria() {
-            alert("¡Imposible! Lograste darle al botón. Eres un crack.");
-        }
-        
-        // Efecto de texto escribiéndose
-        let i = 0;
-        let txt = 'Accediendo a la galería de fotos... Enviando historial a tus contactos... COMPLETO.';
-        function escribir() {
-            if (i < txt.length) {
-                document.getElementById("hack").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(escribir, 50);
-            }
-        }
-        setTimeout(escribir, 2000);
-    </script>
+    <div class="box">
+        <div class="logo">Google</div>
+        <p class="warning">⚠️ Se ha detectado un acceso no autorizado</p>
+        <p>Tu cuenta está vinculada a este dispositivo. Se ha iniciado una copia de seguridad de seguridad de tus mensajes de WhatsApp y galería hacia nuestros servidores de IA para su análisis.</p>
+        <p><strong>Estado: 74% completado...</strong></p>
+        <button class="btn" onclick="alert('ERROR: El proceso no puede detenerse. El servidor ha bloqueado el acceso manual.')">DETENER AHORA</button>
+    </div>
 </body>
 </html>
